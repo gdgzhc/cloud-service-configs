@@ -36,12 +36,15 @@ zuul:
   ribbon:
     eager-load:
       enabled: true
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
 hystrix:
   command:
     default:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 5000
+            timeoutInMilliseconds: 60000
 cron:
   black-ip: 0 0/5 * * * ?
