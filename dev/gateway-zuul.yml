@@ -26,6 +26,9 @@ zuul:
     file:
       path: /api-f/**
       serviceId: file-center
+    sms:
+      path: /api-n/**
+      serviceId: notification-center
   host:
     connect-timeout-millis: 10000
     socket-timeout-millis: 60000

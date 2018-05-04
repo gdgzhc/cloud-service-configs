@@ -15,6 +15,9 @@ spring:
     username: cloud-dev
     password: cloud-dev
     virtual-host: /
+  redis:
+    host: local.redis.com
+    port: 6379
   mvc:
     servlet:
       load-on-startup: 1
@@ -30,3 +33,12 @@ security:
     resource:
       user-info-uri: http://local.gateway.com:8080/api-o/user-me
       prefer-token-info: false
+wechat:
+  domain: http://api.gateway.com:8080/api-u
+  infos:
+    app1:
+      appid: xxx
+      secret: xxx
+    app2:
+      appid: xxx
+      secret: xxx
