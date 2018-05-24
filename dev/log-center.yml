@@ -9,6 +9,10 @@ spring:
     url: jdbc:mysql://local.mysql.com:3306/cloud_log?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
     username: root
     password: root
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      connection-test-query: SELECT 1
   rabbitmq:
     host: local.rabbitmq.com
     port: 5672
@@ -22,6 +26,9 @@ spring:
     proxy-target-class: true
   zipkin:
     base-url: http://localhost:9411
+    enabled: true
+    sender:
+      type: web
 mybatis:
   type-aliases-package: com.cloud.model.log
   mapper-locations: classpath:/mybatis-mappers/*
