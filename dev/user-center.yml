@@ -22,7 +22,7 @@ spring:
   redis:
     host: local.redis.com
     port: 6379
-    timeout: 3000
+    timeout: 10000
     lettuce:
       pool:
         min-idle: 0
@@ -58,3 +58,13 @@ wechat:
     app2:
       appid: xxx
       secret: xxx
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
