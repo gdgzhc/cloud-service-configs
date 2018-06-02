@@ -19,6 +19,9 @@ spring:
     username: cloud-dev
     password: cloud-dev
     virtual-host: /
+    listener:
+      simple:
+        concurrency: 20
   mvc:
     servlet:
       load-on-startup: 1
