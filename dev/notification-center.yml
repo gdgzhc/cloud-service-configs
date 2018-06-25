@@ -7,6 +7,7 @@ spring:
   redis:
     host: local.redis.com
     port: 6379
+    password:
     timeout: 10000
     lettuce:
       pool:
