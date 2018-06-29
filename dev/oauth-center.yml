@@ -29,6 +29,7 @@ spring:
       type: web
 access_token:
   store-jwt: false
+  jwt-signing-key: xiao@wei@jia@gou=$==+_+%0%:)(:)
 logging:
   level:
     root: info
