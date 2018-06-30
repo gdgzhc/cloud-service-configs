@@ -26,8 +26,8 @@ spring:
     password:
     protocol: smtp
     test-connection: false
-    properties:
-      mail.smtp.auth: true
+#    properties:
+#      mail.smtp.auth: true
   mvc:
     servlet:
       load-on-startup: 1
